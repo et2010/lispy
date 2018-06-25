@@ -234,7 +234,7 @@ The caller of `lispy--show' might use a substitute e.g. `describe-function'."
                 (geiser-doc-symbol-at-point)
               (when (setq doc (lispy--docstring (lispy--current-function)))
                 (goto-char lispy-hint-pos)
-                (lispy--show (propertize doc 'face 'lispy-face-hint)))))))
+                (lispy--show doc))))))
     (error
      (lispy--cleanup-overlay))))
 
